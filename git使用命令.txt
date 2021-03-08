@@ -9,6 +9,9 @@ git log 查看001修改的每个版本
 git reset --hard HEAD^        回到上一个版本   ^^是上上个版本   向上100个版本是HEAD~100
 git reset --hard 1094a     回到对应的id版本，通过git log查找
 git reflog   查看命令记录
-测试 git diff 表示的是工作区与暂存区的差别 
+测试 git diff 表示的是工作区与暂存区的差别  当git add后就看不到修改了
 git diff cached查看暂存区和仓库差异
 git diff HEAD   工作区和仓库区别
+git checkout  -- 001.txt  让文件回到最近一次的commit或add
+git reset HEAD 001.txt 将添加add到暂存区的代码，后退到工作区，添加到暂存区的git diff 本来应该看不到修改，通过这个可以通过git diff  看到修改，就是撤回到工作区，没Git add
+只有commit了后的才有版本id
